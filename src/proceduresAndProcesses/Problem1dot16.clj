@@ -20,4 +20,7 @@
   (is (= 4 (fast-exponential 2 2)) "Incorrect answer for power of 2")
   (is (= 2 (fast-exponential 2 1)) "Incorrect answer for 1")
   (is (= 64 (fast-exponential 2 6)) "Incorrect answer for 6")
-  (is (= 1024 (fast-exponential 2 10)) "Incorrect answer for 10"))
+  (is (= 128 (fast-exponential 2 7)) "Incorrect answer for 7")
+  (is (= 256 (fast-exponential 2 8)) "Incorrect answer for 8")
+  (is (= 1024 (fast-exponential 2 10)) "Incorrect answer for 10")
+  (is (= 27 (fast-exponential 3 3)) "Incorrect answer for 3 3"))
