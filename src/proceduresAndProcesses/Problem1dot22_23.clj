@@ -1,4 +1,4 @@
-(ns proceduresAndProcesses.Problem1dot22
+(ns proceduresAndProcesses.Problem1dot22-23
   (:require [clojure.test :refer [is]]))
 
 ; check for smallest divisor functions
@@ -7,12 +7,18 @@
   [a]
   (* a a))
 
+(defn next
+  [n]
+  (if (even? n)
+    (inc n)
+    (+ 2 n)))
+
 (defn find-divisor
   [a n]
   (cond
     (> (square n) a) a
     (= (mod a n) 0) n
-    :else (find-divisor a (inc n))))
+    :else (find-divisor a (next n))))
 
 (defn smallest-divisor
   [a]
